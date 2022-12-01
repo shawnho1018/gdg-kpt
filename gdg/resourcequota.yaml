@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ResourceQuota
 metadata: # kpt-merge: myexample/default
   name: default
-  namespace: backend
+  namespace: gdg
   annotations:
     internal.kpt.dev/upstream-identifier: '|ResourceQuota|myexample|default'
 spec:
