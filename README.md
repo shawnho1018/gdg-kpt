@@ -1,1 +1,1 @@
-# gdg-kpt
+# gdg-kpt-deployment
