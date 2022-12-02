@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata: # kpt-merge: myexample/app-admin
   name: app-admin
-  namespace: gdg
+  namespace: gdg-live
   annotations:
     internal.kpt.dev/upstream-identifier: 'rbac.authorization.k8s.io|RoleBinding|myexample|app-admin'
 roleRef:
@@ -12,4 +12,4 @@ roleRef:
 subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: Group
-  name: gdg.admin@bigco.com
+  name: gdg-live.admin@bigco.com

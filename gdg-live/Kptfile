@@ -1,7 +1,7 @@
 apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
-  name: gdg
+  name: gdg-live
   annotations:
     config.kubernetes.io/local-config: "true"
 upstream:
@@ -9,15 +9,15 @@ upstream:
   git:
     repo: https://github.com/shawnho1018/gdg-kpt-blueprint
     directory: /basens
-    ref: v5
+    ref: v6
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
     repo: https://github.com/shawnho1018/gdg-kpt-blueprint
     directory: /basens
-    ref: basens/v5
-    commit: da22986af5dbcb681b9c6729131e4d300a1c66cd
+    ref: basens/v6
+    commit: febfcb861d2b8f719f7cc0b32e10ff131e2ce7db
 info:
   description: kpt package for provisioning namespace
 pipeline:
