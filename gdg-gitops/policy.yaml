@@ -11,20 +11,4 @@ spec:
           - 'apps'
         kinds:
           - Deployment
----
-apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sBannedConfigMapKeysV1
-metadata: # kpt-merge: /no-secrets-in-configmap
-  name: no-secrets-in-configmap
-  annotations:
-    internal.kpt.dev/upstream-identifier: 'constraints.gatekeeper.sh|K8sBannedConfigMapKeysV1|default|no-secrets-in-configmap'
-spec:
-  match:
-    kinds:
-      - apiGroups:
-          - ''
-        kinds:
-          - ConfigMap
-  parameters:
-    keys:
-      - private_key
+
