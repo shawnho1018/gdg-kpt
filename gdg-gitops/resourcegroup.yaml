@@ -1,7 +1,0 @@
-apiVersion: kpt.dev/v1alpha1
-kind: ResourceGroup
-metadata:
-  name: inventory-79751430
-  namespace: gdg-gitops
-  labels:
-    cli-utils.sigs.k8s.io/inventory-id: 830ece6ab79f1042e1d2f3659b67623c0194d042-1669996016437803000
