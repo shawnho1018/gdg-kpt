@@ -1,0 +1,31 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: gdg-gitops
+upstream:
+  type: git
+  git:
+    repo: https://github.com/shawnho1018/gdg-kpt-blueprint
+    directory: /wordpress
+    ref: v3
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/shawnho1018/gdg-kpt-blueprint
+    directory: /wordpress
+    ref: wordpress/v3
+    commit: 71a5104a8fd8e9c2f7fecccb8b2e4b4cc4912d0d
+info:
+  emails:
+    - kpt-team@google.com
+  description: This is an example wordpress package with mysql subpackage.
+pipeline:
+  mutators:
+    - image: gcr.io/kpt-fn/set-namespace:v0.4.1
+      configPath: package-context.yaml
+    - image: gcr.io/kpt-fn/set-labels:v0.1
+      configMap:
+        app: wordpress
+  validators:
+    - image: gcr.io/kpt-fn/kubeval:v0.3
