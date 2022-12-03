@@ -9,15 +9,15 @@ upstream:
   git:
     repo: https://github.com/shawnho1018/gdg-kpt-blueprint
     directory: /basens
-    ref: v9
+    ref: v10
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
     repo: https://github.com/shawnho1018/gdg-kpt-blueprint
     directory: /basens
-    ref: basens/v9
-    commit: 07025493106fe42a3e09d29a8fea5a57ad193fae
+    ref: basens/v10
+    commit: 0950a921cbb6bf0ec313a39431629f4b3a785c8c
 info:
   description: kpt package for provisioning namespace
 pipeline:
